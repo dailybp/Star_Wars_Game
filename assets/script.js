@@ -40,10 +40,10 @@ var previouslyFought = [];
 
 //Functions
 //==============================================================================
-var attack = function(hero.attack, villain.attack){
-  hero.health = hero.health - villian.attack;
-  villian.health = villian.health - hero.attack;
-};
+// var attack = function(hero.attack, villain.attack){
+//   hero.health = hero.health - villian.attack;
+//   villian.health = villian.health - hero.attack;
+// };
 
 
 $("#attack").on("click",function(){
@@ -61,8 +61,8 @@ for(var i = 0; i < combatants.length; i++){
   $("#combatants").append(combatantImage);//appends the image to the html file
 };
 
-$("#combatants").on("click",function(){
-  combatants.splice()
-  $("#hero").
-  $("#villian").
-});
+// $(".combatant-image").on("click",function(){
+//   combatants.splice()
+//   $("#hero").
+//   $("#villian").
+// });
