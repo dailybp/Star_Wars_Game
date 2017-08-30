@@ -29,6 +29,8 @@ var combatants = [
 
 var hero = null;
 var villian = null;
+var heroSelected = false;
+var villianSelected = false;
 var attackOccurred = false;
 var winOccurred = false;
 var lossOccurred = false;
@@ -40,14 +42,13 @@ var previouslyFought = [];
 
 //Functions
 //==============================================================================
-// var attack = function(hero.attack, villain.attack){
-//   hero.health = hero.health - villian.attack;
-//   villian.health = villian.health - hero.attack;
-// };
+
 
 
 $("#attack").on("click",function(){
-  attack();
+  if(heroSelected && villianSelected && !gameOver){
+    villian.health = villian.health - hero.attack;
+  }
 });
 
 
@@ -56,13 +57,15 @@ $("#attack").on("click",function(){
 for(var i = 0; i < combatants.length; i++){
   var combatantImage = $("<img>");//assigns an image tag to variable combatantImage
   combatantImage.addClass("combatant-image");//assigns an a html class tag to combatantImage
+  combatantImage.attr("fighter-stats", combatants[i]);
   combatantImage.attr("src", combatants[i].image);//attaches an image to the combatantImage
   console.log(combatantImage)
   $("#combatants").append(combatantImage);//appends the image to the html file
 };
 
-// $(".combatant-image").on("click",function(){
-//   combatants.splice()
-//   $("#hero").
-//   $("#villian").
-// });
+$(".combatant-image").on("click",function(){
+  hero = $(this).attr("fighter-stats");
+  combatants.splice()
+  $("#hero") = hero;
+  $("#villian") = villian;
+});
