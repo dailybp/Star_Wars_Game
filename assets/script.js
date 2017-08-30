@@ -27,11 +27,30 @@ var combatants = [
   image: "assets/images/drogon.jpg"
 }];
 
+var hero = null;
+var villian = null;
+var attackOccurred = false;
+var winOccurred = false;
+var lossOccurred = false;
+var wounded = false;
+var gameOver = false;
+var gameStart = true;
+var previouslyFought = [];
+//var attackPower = null;
+
 //Functions
 //==============================================================================
-$("#attack").on("click",function(){
+var attack = function(hero.attack, villain.attack){
+  hero.health = hero.health - villian.attack;
+  villian.health = villian.health - hero.attack;
+};
 
-}
+
+$("#attack").on("click",function(){
+  attack();
+});
+
+
 //Main Process
 //==============================================================================
 for(var i = 0; i < combatants.length; i++){
@@ -41,3 +60,9 @@ for(var i = 0; i < combatants.length; i++){
   console.log(combatantImage)
   $("#combatants").append(combatantImage);//appends the image to the html file
 };
+
+$("#combatants").on("click",function(){
+  combatants.splice()
+  $("#hero").
+  $("#villian").
+});
