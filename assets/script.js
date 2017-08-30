@@ -1,3 +1,16 @@
+// PsuedoCode
+// create an array for the list of combatants
+// when clicked the first choice becomes the hero
+// on the second click the choice becomes the first enemy
+// both are removed from the list of combatants array
+//
+// when the attack button is pressed:
+// a description is generated and appended to the HTML jumbotron
+// both the hero and villian have thier health decreased by their attack
+// also if they have an ability it kicks in with subsequent attacks.
+//
+// If the health of the hero or villian becomes 0 then they are killed and removed from the enemy array
+
 //Global Variables
 //==============================================================================
 var combatants = [
@@ -16,7 +29,9 @@ var combatants = [
 
 //Functions
 //==============================================================================
+$("#attack").on("click",function(){
 
+}
 //Main Process
 //==============================================================================
 for(var i = 0; i < combatants.length; i++){
